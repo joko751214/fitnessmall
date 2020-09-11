@@ -3,7 +3,7 @@
     <HomepageSidebar/>
     <Header/>
     <div class="container">
-      <section id="section_about">
+      <section class="section_about">
         <div class="row">
           <div class="col-sm-12">
             <h1 v-scrollanimation>美食饗味</h1>
@@ -12,7 +12,7 @@
           <div id="imgWrap1" class="col-md-4 col-sm-6" v-scrollanimation>
             <div>
               <router-link :to="{ name: 'products', params: { categoryName: '早餐套餐' }}">
-                <img src="https://images.unsplash.com/photo-1499969942143-ad2a66bc72dc?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="美味的餐點"/>
+                <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/gNZMjc9wYCw7larB8Vz3G54XLTMeIJls2Wt3PrTj98HXGvgexZJgqvainahOSYUYCfK80DeyfZYBfJxlzVPZmMZ9pTpH9THnFhJfLmGoISjtydX2uDZXYJHjIIEambSo.jpg" alt="美味的餐點"/>
               </router-link>
               <h3>早餐</h3>
               <p>
@@ -20,10 +20,10 @@
               </p>
             </div>
           </div>
-          <div id="imgWrap2" class="col-md-4 col-sm-6" v-scrollanimation>
+          <div class="col-md-4 col-sm-6 imgWrap2" v-scrollanimation>
             <div>
               <router-link :to="{ name: 'products', params: { categoryName: '沙拉' }}">
-                <img src="https://images.unsplash.com/photo-1582034986517-30d163aa1da9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="美味的餐點"/>
+                <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/LaogsHFcz3Jf2t7qFOV03m5lQzMN0Sr5WhVWCWKnUWyE9dTDcpQch7CH5qK4fmxEZSscjqZ34M5aFKJFYYJ6Ae01fhXWZKlZ3vVEt2vJbPknFaxlPThbAYMSwBunn0oS.jpg" alt="美味的餐點"/>
               </router-link>
               <h3>沙拉</h3>
               <p>
@@ -31,10 +31,10 @@
               </p>
             </div>
           </div>
-          <div id="imgWrap3" class="col-md-4 col-sm-6" v-scrollanimation>
+          <div class="col-md-4 col-sm-6 imgWrap3" v-scrollanimation>
             <div>
               <router-link :to="{ name: 'products', params: { categoryName: '水果拼盤' }}">
-                <img src="https://images.unsplash.com/photo-1562166453-964fd947f2a4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="美味的餐點"/>
+                <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/15nWEV7ZEpByyF3raxzmviII2DYK7qmmQjAsoC0hILRQuJUT9SsIsACaQOQpl53gsDaNiOCcZpo7ahAdbRsmeFpnhJR9YlievGkLmIVgDIU0gg9MUBXl71fQfWKlzeve.jpg" alt="美味的餐點"/>
               </router-link>
               <h3>水果拼盤</h3>
               <p>
@@ -46,7 +46,7 @@
       </section>
     </div>
     <div class="container">
-      <section id="section_story">
+      <section class="section_story">
         <div class="row">
           <div class="col-sm-5 foodImg" v-scrollanimation></div>
           <div class="col-sm-7 pl-0 pr-4">
@@ -80,17 +80,6 @@
         </div>
       </section>
     </div>
-    <!-- <section class="jumbotron rounded-0">
-      <div class="container">
-        <h2 class='text-center'>About us</h2>
-        <div class="row">
-          <div class="col-md-5">
-            <div class="image-about"></div>
-          </div>
-          <div class="col-md-7"></div>
-        </div>
-      </div>
-    </section> -->
     <Footer/>
   </div>
 </template>
@@ -126,71 +115,71 @@ section {
   padding: 50px 0px;
 }
 
-#section_about img {
+.section_about img {
   width: 100%;
   /* padding: 0; */
 }
-#section_about .before-enter {
+.section_about .before-enter {
   opacity: 0;
   transform: translateX(100px);
   transition: all 1s cubic-bezier(.41,.01,.57,1.61);
 }
-#section_about .enter {
+.section_about .enter {
   opacity: 1;
   transform: translateX(0px);
 }
 
-#section_about #imgWrap2 {
+.section_about .imgWrap2 {
   transition-delay: .5s;
 }
-#section_about #imgWrap3 {
+.section_about .imgWrap3 {
   transition-delay: 1s;
 }
 
-#section_story {
+.section_story {
   background-color: #a6dcef;
   color: white;
   padding: 0px 0px;
   margin-bottom: 50px;
   text-align: center;
 }
-#section_story .foodImg {
-  background-image: url(https://images.unsplash.com/photo-1576021182211-9ea8dced3690?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+.section_story .foodImg {
+  background-image: url(https://hexschool-api.s3.us-west-2.amazonaws.com/custom/tedycYMX8MnNEGbu9PxjqZbJx1bkqS09HGv94yQ49D3PsGnM9itM6bZ19bsHHxBGO3rdnrZFyhwccPVkG0NptFKDFAYjLFH6jrKBFqteyz9zcN04HrwAFHUU3xWXNGxo.jpg);
   background-repeat: no-repeat;
   background-origin: content-box;
   height: 400px
 }
-#section_story .features {
+.section_story .features {
   margin-top: 80px;
   margin-bottom: 80px;
 }
-#section_story .features i {
+.section_story .features i {
   font-size: 40px;
 }
-#section_story .before-enter {
+.section_story .before-enter {
   background-size: 150%;
   background-position: 0% 0%;
   transition: all 3s ease-out;
 }
-#section_story .enter {
+.section_story .enter {
   background-size: 100%;
   background-position: 50% 50%;
 }
-#section_story .features .before-enter{
+.section_story .features .before-enter{
   transform: scale(1.5);
   opacity: 0;
   transition: all 3s ease-out;
 }
-#section_story .features .enter{
+.section_story .features .enter{
   transform: scale(1);
   opacity: 1;
 }
-#section_story .content .before-enter{
+.section_story .content .before-enter{
   transform: scale(1.5);
   opacity: 0;
   transition: all 3s ease-out;
 }
-#section_story .content .enter{
+.section_story .content .enter{
   transform: scale(1);
   opacity: 1;
 }
@@ -199,10 +188,6 @@ section.jumbotron {
   margin-top: 50px;
   padding: 20px;
   background: #e0ece4;
-  /* text-align: center;
-  background-image: url(https://images.unsplash.com/photo-1479803244419-b24dfe9cbafa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
-  background-size: cover;
-  background-attachment: fixed; */
   margin-bottom: 0px;
 }
 section.jumbotron .container {
@@ -213,17 +198,11 @@ section.jumbotron h2 {
   font-size: 60px;
 }
 
-.image-about {
-  background-image: url('https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
-  height: 300px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px grey;
-}
 @media screen and (max-width: 767px) {
-  #section_about #imgWrap2 {
+  .section_about .imgWrap2 {
     transition-delay: 0s;
   }
-  #section_about #imgWrap3 {
+  .section_about .imgWrap3 {
     transition-delay: 0s;
   }
 }

@@ -16,22 +16,22 @@ export default {
 </script>
 
 <style>
-header.jumbotron {
+.jumbotron {
   text-align: center;
-  background-image: url(https://images.unsplash.com/photo-1479803244419-b24dfe9cbafa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+  background-image: url(https://hexschool-api.s3.us-west-2.amazonaws.com/custom/7CWruTfUDAMEDSnjSofXOvW0EWdSHdgovex4uEdOMdxWzBoWFV05sFDefhFjAoCYcIc1JXxaaoTJCkvHySOH23a9AC9S7wPcN50q5yJTwAusY1wWyYBOtarrgS6nMuhu.jpg);
   background-size: cover;
   background-attachment: fixed;
   margin-bottom: 0;
 }
-header.jumbotron .container {
+.jumbotron .container {
   color: white;
   padding: 200px 0px;
 }
-header.jumbotron hr {
+.jumbotron hr {
   max-width: 50px;
   border: 2px solid #ff6e3a;
 }
-header.jumbotron h4 {
+.jumbotron h4 {
   color: rgba(255, 255, 255, 0.5);
   font-weight: normal;
 }

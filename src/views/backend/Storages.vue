@@ -49,7 +49,7 @@
                 class="form-control mt-3"
                 ref='file'
                 @change="uploadFile">
-                <img :src="filePath" class='img-fluid mt-3' alt="美味的餐點">
+                <img :src="filePath" class='img-fluid mt-3' alt="美味的餐點" v-if='filePath'>
               </div>
             </form>
           </div>
@@ -124,9 +124,6 @@ export default {
     },
     getStorages() {
       const api = `${process.env.VUE_APP_APIPATH}/${process.env.VUE_APP_UUID}/admin/storage`;
-      const token = document.cookie.replace(/(?:(?:^|.*;\s*)hexToken\s*=\s*([^;]*).*$)|^.*$/, '$1');
-
-      this.$http.defaults.headers.common.Authorization = `Bearer ${token}`;
 
       const loader = this.$loading.show();
       this.$http.get(api)
@@ -172,6 +169,7 @@ export default {
           this.tempStorage = res.data.data;
           loader.hide();
           this.status = true;
+          console.log(res);
         })
         .catch((err) => {
           this.$swal(

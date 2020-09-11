@@ -42,9 +42,6 @@ export default {
     deleteProduct() {
       const api = `${process.env.VUE_APP_APIPATH}/${process.env.VUE_APP_UUID}/admin/ec/product/${this.tempProduct.id}`;
 
-      const token = document.cookie.replace(/(?:(?:^|.*;\s*)hexToken\s*=\s*([^;]*).*$)|^.*$/, '$1');
-      this.$http.defaults.headers.common.Authorization = `Bearer ${token}`;
-
       this.status = true;
       this.$http.delete(api)
         .then(() => {

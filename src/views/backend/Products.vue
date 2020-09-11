@@ -78,9 +78,6 @@ export default {
   methods: {
     getProducts(page = 1) {
       const apiUrl = `${process.env.VUE_APP_APIPATH}/${process.env.VUE_APP_UUID}/admin/ec/products`;
-      const token = document.cookie.replace(/(?:(?:^|.*;\s*)hexToken\s*=\s*([^;]*).*$)|^.*$/, '$1');
-
-      this.$http.defaults.headers.common.Authorization = `Bearer ${token}`;
 
       const params = {
         page,

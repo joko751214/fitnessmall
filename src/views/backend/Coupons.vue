@@ -174,9 +174,6 @@ export default {
     },
     getCoupons() {
       const apiUrl = `${process.env.VUE_APP_APIPATH}/${process.env.VUE_APP_UUID}/admin/ec/coupons`;
-      const token = document.cookie.replace(/(?:(?:^|.*;\s*)hexToken\s*=\s*([^;]*).*$)|^.*$/, '$1');
-
-      this.$http.defaults.headers.common.Authorization = `Bearer ${token}`;
 
       const loader = this.$loading.show();
       this.$http.get(apiUrl)

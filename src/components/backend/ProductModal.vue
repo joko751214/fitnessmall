@@ -120,9 +120,6 @@ export default {
       let api = `${process.env.VUE_APP_APIPATH}/${process.env.VUE_APP_UUID}/admin/ec/product`;
       let httpMethod = 'post';
 
-      const token = document.cookie.replace(/(?:(?:^|.*;\s*)hexToken\s*=\s*([^;]*).*$)|^.*$/, '$1');
-      this.$http.defaults.headers.common.Authorization = `Bearer ${token}`;
-
       if (this.product.id) {
         api = `${process.env.VUE_APP_APIPATH}/${process.env.VUE_APP_UUID}/admin/ec/product/${this.product.id}`;
         httpMethod = 'patch';
@@ -163,7 +160,6 @@ export default {
     },
     uploadFile() {
       const url = `${process.env.VUE_APP_APIPATH}/${process.env.VUE_APP_UUID}/admin/storage`;
-      this.$http.defaults.headers.common.Authorization = `Bearer ${this.token}`;
 
       const uploadedFile = this.$refs.file.files[0];
       // 轉成Form Data
