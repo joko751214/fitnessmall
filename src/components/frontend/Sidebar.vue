@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar fixed-top navbar-expand-md navbar-top bg-primary">
+  <nav class="navbar py-1 fixed-top navbar-expand-md navbar-top bg-primary">
     <div class="container">
       <router-link class="navbar-brand" to="/">Fitnessmall</router-link>
       <button class="navbar-toggler navbar-light" type="button"
@@ -13,8 +13,7 @@
         <div class="nav navbar-nav ml-auto">
           <li class="nav-item">
             <router-link class="nav-link" to="/favorite">
-              <i class="fas fa-heart"
-              style="font-size: 1.2rem;transform: translateX(-5px)"></i>
+              <i class="fas fa-heart"></i>
             </router-link>
           </li>
           <li class="nav-item">
@@ -44,7 +43,7 @@ export default {
   color: white;
 }
 .navbar-top a:hover {
-  color: #ff6e3a;
+  color: #21203B;
 }
 .nav-link {
   color: white;
@@ -52,5 +51,21 @@ export default {
 .navbar-brand {
   font-family: 'Great Vibes', cursive;
   font-size: 40px;
+}
+@media screen and (max-width: 767px){
+    .navbar-brand {
+        font-size: 28px;
+    }
+    .nav-item {
+      font-size: 14px;
+    }
+}
+@media screen and (max-width: 375px){
+    .navbar-brand{
+        font-size: 20px;
+    }
+    .nav-item {
+      font-size: 10px;
+    }
 }
 </style>

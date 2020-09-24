@@ -210,4 +210,20 @@ export default {
   top: 0;
   right: 35px;
 }
+
+@media screen and (max-width: 1200px){
+  .tag {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 576px){
+  .tag {
+    transform: translate(65%,-500%) rotate(45deg);
+  }
+}
+@media screen and (max-width: 375px){
+  .tag {
+    transform: translate(60%,-500%) rotate(45deg);
+  }
+}
 </style>

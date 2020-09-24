@@ -15,7 +15,7 @@
             <td>{{ order.created.datetime }}</td>
             <td>
               <ul class="list-unstyled">
-                <li v-for='(item, index) in order.products' :key=index>
+                <li v-for='(item, index) in order.products' :key="index">
                   {{ item.product.title }} 數量: {{ item.quantity }} {{ item.product.unit }}
                 </li>
               </ul>

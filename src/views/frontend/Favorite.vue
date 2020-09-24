@@ -18,7 +18,9 @@
           <tbody>
             <tr v-for="followProduct in followProducts" :key="followProduct.id">
               <td width='100'>
-                <img :src="followProduct.imageUrl[0]" class="img-fluid" alt="美味的餐點">
+                <router-link :to="`/product/${ followProduct.id }`">
+                  <img :src="followProduct.imageUrl[0]" class="img-fluid" alt="美味的餐點">
+                </router-link>
               </td>
               <td class="align-middle">{{ followProduct.title }}</td>
               <td class="align-middle">{{ followProduct.price | currency }}</td>
@@ -51,15 +53,20 @@
       </div>
     </div>
     <ProductsCategory/>
+    <router-link to="/cart" class="cart px-2 py-3 bg-primary">
+      <CartIcon />
+    </router-link>
   </div>
 </template>
 
 <script>
 import ProductsCategory from '@/components/frontend/ProductsCategory.vue';
+import CartIcon from '@/components/frontend/CartIcon.vue';
 
 export default {
   components: {
     ProductsCategory,
+    CartIcon,
   },
   data() {
     return {
@@ -91,6 +98,7 @@ export default {
         .then((res) => {
           this.products = res.data.data;
           this.getFollow();
+          console.log(this.followProducts);
           loader.hide();
         }).catch((err) => {
           this.$swal(

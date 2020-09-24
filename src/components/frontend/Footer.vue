@@ -1,19 +1,19 @@
 <template>
   <footer class="footer bg-primary">
-     <div class="container p-1">
+    <div class="container p-1">
       <div class="row">
         <div class="col-6">
           <div class="d-flex justify-content-center">
             <ul class="d-flex list-unstyled mb-0">
-              <li class="nav-item">
+              <li class="nav-item menu-list">
                 <router-link to="/products"
-                            class="nav-link text-white">
+                            class="nav-link">
                   商品列表
                 </router-link>
               </li>
-              <li>
+              <li class="nav-item menu-list">
                 <router-link to="/about"
-                            class="nav-link text-white">
+                            class="nav-link">
                   關於我們
                 </router-link>
               </li>
@@ -55,25 +55,35 @@ export default {
 </script>
 
 <style>
-.container {
-  color: white;
+.footer {
+  font-weight: 900;
+}
+.footer li a{
+  font-size: 20px;
+  display: block;
 }
 .icon-box i{
-  font-size: 2rem;
+  font-size: 28px;
   color: white;
 }
-
-a:hover {
-  text-decoration: none;
+.icon-box i:hover{
+  color: #21203B;
 }
-
-.copyright {
+.copyright p{
   color: white;
   text-align: center;
 }
-
-@media screen and (max-width: 767px) {
-
+@media screen and (max-width: 576px){
+  .menu-list .nav-link{
+    font-size: 18px;
+  }
+  .icon-box i{
+    font-size: 24px;
+  }
 }
-
+@media screen and (min-width: 321px) and (max-width: 576px){
+  .menu-list .nav-link{
+    max-width: 70px;
+  }
+}
 </style>

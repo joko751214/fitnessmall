@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HomepageSidebar/>
+    <Sidebar/>
     <Header/>
     <div class="container">
       <section class="section_about">
@@ -9,72 +9,106 @@
             <h1 v-scrollanimation>美食饗味</h1>
             <hr/>
           </div>
-          <div id="imgWrap1" class="col-md-4 col-sm-6" v-scrollanimation>
-            <div>
-              <router-link :to="{ name: 'products', params: { categoryName: '早餐套餐' }}">
-                <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/gNZMjc9wYCw7larB8Vz3G54XLTMeIJls2Wt3PrTj98HXGvgexZJgqvainahOSYUYCfK80DeyfZYBfJxlzVPZmMZ9pTpH9THnFhJfLmGoISjtydX2uDZXYJHjIIEambSo.jpg" alt="美味的餐點"/>
-              </router-link>
-              <h3>早餐</h3>
-              <p>
-              每天都拿不定主意早餐要吃什麼嗎? <br/>快來FITNESMALL挑選美味可口的早餐
-              </p>
-            </div>
+          <div class="col-md-4 col-sm-6 imgWrap1 text" v-scrollanimation>
+            <router-link :to="{ name: 'products', params: { categoryName: '早餐套餐' }}">
+              <div class='item-img'>
+                <div class="more">了解更多</div>
+              </div>
+              <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/gNZMjc9wYCw7larB8Vz3G54XLTMeIJls2Wt3PrTj98HXGvgexZJgqvainahOSYUYCfK80DeyfZYBfJxlzVPZmMZ9pTpH9THnFhJfLmGoISjtydX2uDZXYJHjIIEambSo.jpg" alt="美味的餐點"/>
+            </router-link>
+            <h3>早餐</h3>
+            <p>
+            每天都拿不定主意早餐要吃什麼嗎?快來FITNESMALL挑選美味可口的早餐，讓你每天早晨活力充沛、健康滿滿。
+            </p>
           </div>
-          <div class="col-md-4 col-sm-6 imgWrap2" v-scrollanimation>
-            <div>
-              <router-link :to="{ name: 'products', params: { categoryName: '沙拉' }}">
-                <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/LaogsHFcz3Jf2t7qFOV03m5lQzMN0Sr5WhVWCWKnUWyE9dTDcpQch7CH5qK4fmxEZSscjqZ34M5aFKJFYYJ6Ae01fhXWZKlZ3vVEt2vJbPknFaxlPThbAYMSwBunn0oS.jpg" alt="美味的餐點"/>
-              </router-link>
-              <h3>沙拉</h3>
-              <p>
-              新鮮沙拉為FITNESSMALL最經典的產品<br/>採用豐富的萵苣、蘿蔓、歐式生菜與蔬果<br/>點綴自製的美味醬料，品嘗生菜的鮮甜爽脆
-              </p>
-            </div>
+          <div class="col-md-4 col-sm-6 imgWrap2 text" v-scrollanimation>
+            <router-link :to="{ name: 'products', params: { categoryName: '沙拉' }}">
+              <div class='item-img'>
+                <div class="more">了解更多</div>
+              </div>
+              <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/LaogsHFcz3Jf2t7qFOV03m5lQzMN0Sr5WhVWCWKnUWyE9dTDcpQch7CH5qK4fmxEZSscjqZ34M5aFKJFYYJ6Ae01fhXWZKlZ3vVEt2vJbPknFaxlPThbAYMSwBunn0oS.jpg" alt="美味的餐點"/>
+            </router-link>
+            <h3>沙拉</h3>
+            <p>
+            新鮮沙拉為FITNESSMALL最經典的產品，採用豐富的萵苣、蘿蔓、歐式生菜與蔬果，點綴自製的美味醬料，品嘗生菜的鮮甜爽脆
+            </p>
           </div>
-          <div class="col-md-4 col-sm-6 imgWrap3" v-scrollanimation>
-            <div>
-              <router-link :to="{ name: 'products', params: { categoryName: '水果拼盤' }}">
-                <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/15nWEV7ZEpByyF3raxzmviII2DYK7qmmQjAsoC0hILRQuJUT9SsIsACaQOQpl53gsDaNiOCcZpo7ahAdbRsmeFpnhJR9YlievGkLmIVgDIU0gg9MUBXl71fQfWKlzeve.jpg" alt="美味的餐點"/>
-              </router-link>
-              <h3>水果拼盤</h3>
-              <p>
-              水果為產地新鮮直送<br/>除了沙拉之外，也可以有別的輕食選擇
-              </p>
-            </div>
+          <div class="col-md-4 col-sm-6 imgWrap3 text" v-scrollanimation>
+            <router-link :to="{ name: 'products', params: { categoryName: '水果拼盤' }}">
+              <div class='item-img'>
+                <div class="more">了解更多</div>
+              </div>
+              <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/15nWEV7ZEpByyF3raxzmviII2DYK7qmmQjAsoC0hILRQuJUT9SsIsACaQOQpl53gsDaNiOCcZpo7ahAdbRsmeFpnhJR9YlievGkLmIVgDIU0gg9MUBXl71fQfWKlzeve.jpg" alt="美味的餐點"/>
+            </router-link>
+            <h3>水果拼盤</h3>
+            <p>
+            產地新鮮直送的水果，除了新鮮之外，還是新鮮。提供更精緻、多元且層次更豐富的餐食，讓您有更多的輕食選擇
+            </p>
           </div>
         </div>
       </section>
     </div>
+    <div class='about_us'>
+      <div class="container">
+        <h2 class='about-us-title'>about us</h2>
+        <div class="row">
+          <div class="col-md-5">
+            <img class='about-us-image' src="https://images.unsplash.com/photo-1495461199391-8c39ab674295?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="AboutUsImage">
+          </div>
+          <div class="col-md-7">
+            <p class='about-us-text'>
+              來自法國的三星主廚說：生活必須是一件愉快的事情，這一切應該從你的早餐開始。
+              FITNESSMALL秉持著「買得起也要吃的飽」的經營理念，
+              除了要給消費者一個"專屬於您"的感覺外，也要在消費者的心中建立起"FITNESSMALL的早餐是專屬為我現做的"。
+            </p>
+            <p>
+              於是，我們堅持，是必須從拒絕開始，捨去過度奢華的裝潢，回歸最原本的初衷，保留原粹食材的真實性，希望從你第一口咬的那一刻起，就會知道擁有真實的感受。
+            </p>
+            <p>
+              歷經的這些日子，FITNESSMALL也逐漸的烙印在消費者心中，並陪伴著無數的早晨，努力打造一份活力早餐，成就一個事業。
+            </p>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-7">
+            <img class='about-us-image' src="https://images.unsplash.com/photo-1467453678174-768ec283a940?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="AboutUsImage">
+          </div>
+          <div class="col-md-5">
+            <img class='about-us-image' src="https://images.unsplash.com/photo-1504113888839-1c8eb50233d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="AboutUsImage">
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <section class="section_story">
         <div class="row">
-          <div class="col-sm-5 foodImg" v-scrollanimation></div>
-          <div class="col-sm-7 pl-0 pr-4">
+          <div class="col-md-5 pr-0 foodImg" v-scrollanimation></div>
+          <div class="col-sm-12 col-md-7 story-info">
             <div class="col-sm-12 content">
               <h1 v-scrollanimation>健康 & 飲食</h1>
               <hr/>
             </div>
-            <div class="col-sm-12 p-0 features">
+            <div class="p-0 features">
               <div class="row">
-                <div class="col-sm-4" v-scrollanimation>
+                <div class="col-4" v-scrollanimation>
                   <i class="fas fa-stroopwafel"></i>
                   <h4>美味可口</h4>
                 </div>
-                <div class="col-sm-4" v-scrollanimation>
+                <div class="col-4" v-scrollanimation>
                   <i class="fas fa-seedling"></i>
                   <h4>健康營養</h4>
                 </div>
-                <div class="col-sm-4" v-scrollanimation>
+                <div class="col-4" v-scrollanimation>
                   <i class="fas fa-utensils"></i>
                   <h4>挑動味蕾</h4>
                 </div>
               </div>
             </div>
             <div class="col-sm-12 content">
-              <h5 v-scrollanimation>
+              <p v-scrollanimation>
                 食物能夠傳遞喜悅與滿足。從蔬果產地、水質清洗到人工逐葉揀選，講究新鮮品質與食安衛生，無毒且口感水嫩清脆，
                 打造安心且獨一無二的輕食品，讓您在味蕾間，品嘗疏食鮮甜的感動與原味本質。
-              </h5>
+              </p>
             </div>
           </div>
         </div>
@@ -85,39 +119,40 @@
 </template>
 
 <script>
-/* global $ */
 import Header from '@/components/frontend/Header.vue';
-import HomepageSidebar from '@/components/frontend/HomepageSidebar.vue';
+import Sidebar from '@/components/frontend/Sidebar.vue';
 import Footer from '@/components/frontend/Footer.vue';
-
-// 視窗滑動時執行的事件
-$(window).scroll(() => {
-  if ($(window).scrollTop() > 0) {
-    $('.nav-bar').removeClass('homebar');
-    $('.nav-bar').addClass('bg-primary');
-  } else {
-    $('.nav-bar').addClass('homebar');
-    $('.nav-bar').removeClass('bg-primary');
-  }
-});
 
 export default {
   components: {
-    HomepageSidebar,
+    Sidebar,
     Header,
     Footer,
   },
 };
 </script>
 
-<style>
+<style lang="scss">
 section {
   padding: 50px 0px;
 }
-
+.section_about h1,h3,p{
+  color: #000;
+  font-weight: 900;
+}
+.text h3,p{
+  margin-top: 15px;
+}
+.text p{
+  width: 80%;
+  color: rgba(0,0,0,.6);
+}
+.text a{
+  display: block;
+  position: relative;
+}
 .section_about img {
   width: 100%;
-  /* padding: 0; */
 }
 .section_about .before-enter {
   opacity: 0;
@@ -130,28 +165,53 @@ section {
 }
 
 .section_about .imgWrap2 {
-  transition-delay: .5s;
+  transition-delay: .2s;
 }
 .section_about .imgWrap3 {
-  transition-delay: 1s;
+  transition-delay: .5s;
+}
+
+.about_us {
+  background: #e0ece4;
+  padding: 50px 0px;
+  margin-bottom: 50px;
+}
+.about-us-title {
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+  font-size: 60px;
+  color: #37523d;
+}
+.about-us-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.about-us-text {
+  line-height: 35px;
 }
 
 .section_story {
-  background-color: #a6dcef;
   color: white;
   padding: 0px 0px;
   margin-bottom: 50px;
   text-align: center;
 }
+.story-info {
+  background-color: #a6dcef;
+  padding: 20px;
+}
+.section_story p {
+  color: #fff;
+}
 .section_story .foodImg {
   background-image: url(https://hexschool-api.s3.us-west-2.amazonaws.com/custom/tedycYMX8MnNEGbu9PxjqZbJx1bkqS09HGv94yQ49D3PsGnM9itM6bZ19bsHHxBGO3rdnrZFyhwccPVkG0NptFKDFAYjLFH6jrKBFqteyz9zcN04HrwAFHUU3xWXNGxo.jpg);
   background-repeat: no-repeat;
   background-origin: content-box;
-  height: 400px
 }
 .section_story .features {
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .section_story .features i {
   font-size: 40px;
@@ -159,7 +219,7 @@ section {
 .section_story .before-enter {
   background-size: 150%;
   background-position: 0% 0%;
-  transition: all 3s ease-out;
+  transition: all 2s ease-out;
 }
 .section_story .enter {
   background-size: 100%;
@@ -168,7 +228,7 @@ section {
 .section_story .features .before-enter{
   transform: scale(1.5);
   opacity: 0;
-  transition: all 3s ease-out;
+  transition: all 1s ease-out;
 }
 .section_story .features .enter{
   transform: scale(1);
@@ -177,7 +237,7 @@ section {
 .section_story .content .before-enter{
   transform: scale(1.5);
   opacity: 0;
-  transition: all 3s ease-out;
+  transition: all 1s ease-out;
 }
 .section_story .content .enter{
   transform: scale(1);
@@ -197,14 +257,50 @@ section.jumbotron h2 {
   font-family: 'Great Vibes', cursive;
   font-size: 60px;
 }
-
-@media screen and (max-width: 767px) {
+.item-img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: rgba(0,0,0,.4);
+  transition: opacity .5s ease;
+  z-index: 100;
+}
+.more{
+  font-size: 25px;
+  font-weight: 900;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  letter-spacing: 2px;
+  transition: transform .5s ease;
+  color: #fff;
+}
+.section_about .text a:hover {
+  .item-img {
+    opacity: 1;
+   }
+  .caption {
+    transform: translateY(0px);
+  }
+}
+@media screen and (max-width: 768px) {
   .section_about .imgWrap2 {
     transition-delay: 0s;
   }
   .section_about .imgWrap3 {
     transition-delay: 0s;
   }
+  .about-us-image {
+    display: none;
+  }
+  .foodImg {
+    display: none;
+  }
 }
-
 </style>

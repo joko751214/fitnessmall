@@ -116,12 +116,12 @@ export default {
 
         case 'edit':
           $('#customFile').val('');
-          this.tempProduct = Object.assign({}, item);
+          this.tempProduct = { ...item };
           this.$refs.productModal.getProduct(this.tempProduct.id);
           break;
 
         case 'delete':
-          this.tempProduct = Object.assign({}, item);
+          this.tempProduct = { ...item };
           $('#deleteModal').modal('show');
           break;
         default:

@@ -6,7 +6,6 @@ import VueAxios from 'vue-axios';
 import jquery from 'jquery';
 import BootstrapVue from 'bootstrap-vue';
 import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap-vue/dist/bootstrap-vue.css';
 import 'bootstrap';
 import VueSwal from 'vue-swal';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -25,8 +24,6 @@ import './bus';
 import App from './App.vue';
 import router from './router';
 
-// scrollanimation, 參考影片: https://www.youtube.com/watch?v=NVgNUXsXn-s
-// 覺得aos不好用，所以選擇用這個
 import ScrollAnimation from './directives/scrollanimation';
 
 // 將jquery設為全域

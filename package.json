@@ -56,7 +56,6 @@
       "parser": "babel-eslint"
     },
     "rules": {
-      "prefer-object-spread": "off"
     }
   },
   "browserslist": [

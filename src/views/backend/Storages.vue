@@ -114,7 +114,7 @@ export default {
           $('#storageModal').modal('show');
           break;
         case 'delete':
-          this.tempStorage = Object.assign({}, item);
+          this.tempStorage = { ...item };
           this.index = index;
           $('#deleteModal').modal('show');
           break;
@@ -169,7 +169,6 @@ export default {
           this.tempStorage = res.data.data;
           loader.hide();
           this.status = true;
-          console.log(res);
         })
         .catch((err) => {
           this.$swal(

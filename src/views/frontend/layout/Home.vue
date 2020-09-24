@@ -28,7 +28,7 @@ export default {
 <style>
 @charset "UTF-8";
 * {
-  font-family: 微軟正黑體;
+  font-family: 'Microsoft JhengHei', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6.h1, .h2, .h3, .h4, .h5, .h6 {

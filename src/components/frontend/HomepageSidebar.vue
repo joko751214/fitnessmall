@@ -30,6 +30,19 @@
 </template>
 
 <script>
+/* global $ */
+
+// 視窗滑動時執行的事件
+$(window).scroll(() => {
+  if ($(window).scrollTop() > 0) {
+    $('.nav-bar').removeClass('homebar');
+    $('.nav-bar').addClass('bg-primary');
+  } else {
+    $('.nav-bar').addClass('homebar');
+    $('.nav-bar').removeClass('bg-primary');
+  }
+});
+
 export default {
   data() {
     return {
@@ -42,6 +55,7 @@ export default {
 <style>
 .navbar {
   transition: 0.5s;
+  font-weight: 900;
 }
 .navbar-brand {
   font-family: 'Great Vibes', cursive;
@@ -50,8 +64,11 @@ export default {
 .homebar {
   background-color: transparent;
 }
-.homebar a:hover {
-  color: #ff6e3a;
+.nav-bar a:hover {
+  color: #FFB79D;
+}
+.bg-primary a:hover {
+  color: #21203B;
 }
 .nav-link {
   color: white;
