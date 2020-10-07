@@ -15,7 +15,7 @@
         <div class="col-12 col-md-3 px-0">
           <ul class="list-unstyled mb-0">
             <li class="nav-item menu-list list2">
-              <router-link to="/about"
+              <router-link to="/"
                           class="nav-link px-0">
                 關於我們
               </router-link>
@@ -71,6 +71,9 @@ export default {
   &:hover {
     color:#000;
   }
+  &:active {
+    color:#000;
+  }
 }
 .copyright p {
   color: #fff;
@@ -80,6 +83,9 @@ export default {
   a {
     color: #fff;
     &:hover {
+      color: #000;
+    }
+    &:active {
       color: #000;
     }
   }

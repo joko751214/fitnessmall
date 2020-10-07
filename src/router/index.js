@@ -10,7 +10,6 @@ const routes = [
   },
   {
     path: '',
-    name: 'Home',
     component: () => import('../views/frontend/layout/Home.vue'),
     children: [
       {
@@ -18,7 +17,6 @@ const routes = [
         component: () => import('../views/frontend/Favorite.vue'),
       },
       {
-        name: 'products',
         path: 'products',
         component: () => import('../views/frontend/Products.vue'),
       },

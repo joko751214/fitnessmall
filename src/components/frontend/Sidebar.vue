@@ -71,4 +71,9 @@ export default {
       font-size: 12px;
     }
 }
+@media screen and (min-width: 768px) {
+    .router-link-active {
+      border-bottom: solid #FFFFFF 3px;
+    }
+  }
 </style>

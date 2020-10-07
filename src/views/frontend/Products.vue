@@ -1,6 +1,6 @@
 <template>
-  <div class="container" style="margin-top: 7rem;margin-bottom: 8rem;" v-if="products.length > 0">
-    <div class="row product">
+  <div class="container ec-container" style="margin-top: 7rem;margin-bottom: 5rem;">
+    <div class="row product" v-if="products.length > 0">
       <div class="col-lg-2 col-md-3 mb-3">
         <ul class="list-group sticky-top rounded-0">
           <a href="#"
@@ -165,6 +165,9 @@ export default {
 </script>
 
 <style>
+.ec-container {
+  min-height: 100vh;
+}
 .cart {
   position: fixed;
   right: 1%;
