@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar py-1 fixed-top navbar-expand-md navbar-top bg-primary">
+  <nav class="navbar py-1 fixed-top navbar-expand-md navbar-top">
     <div class="container">
       <router-link class="navbar-brand" to="/">Fitnessmall</router-link>
       <button class="navbar-toggler navbar-light" type="button"
@@ -37,13 +37,16 @@ export default {
   },
 };
 </script>
-
-<style>
-.navbar-top a {
-  color: white;
-}
-.navbar-top a:hover {
-  color: #21203B;
+<style lang="scss">
+.navbar-top {
+  background-color: #667B68;
+  font-weight: 900;
+  a {
+    color: white;
+    &:hover {
+      color: #000;
+    }
+  }
 }
 .nav-link {
   color: white;
@@ -65,7 +68,7 @@ export default {
         font-size: 20px;
     }
     .nav-item {
-      font-size: 10px;
+      font-size: 12px;
     }
 }
 </style>

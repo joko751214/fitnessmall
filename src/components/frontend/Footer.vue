@@ -1,26 +1,28 @@
 <template>
-  <footer class="footer bg-primary">
+  <footer class="footer">
     <div class="container p-1">
-      <div class="row">
-        <div class="col-6">
-          <div class="d-flex justify-content-center">
-            <ul class="d-flex list-unstyled mb-0">
-              <li class="nav-item menu-list">
-                <router-link to="/products"
-                            class="nav-link">
-                  商品列表
-                </router-link>
-              </li>
-              <li class="nav-item menu-list">
-                <router-link to="/about"
-                            class="nav-link">
-                  關於我們
-                </router-link>
-              </li>
-            </ul>
-          </div>
+      <div class="row footer-text">
+        <div class="col-12 col-md-3 px-0">
+          <ul class="list-unstyled mb-0">
+            <li class="nav-item menu-list list1">
+              <router-link to="/products"
+                          class="nav-link px-0">
+                商品列表
+              </router-link>
+            </li>
+          </ul>
         </div>
-        <div class="icon-box text-center col-6">
+        <div class="col-12 col-md-3 px-0">
+          <ul class="list-unstyled mb-0">
+            <li class="nav-item menu-list list2">
+              <router-link to="/about"
+                          class="nav-link px-0">
+                關於我們
+              </router-link>
+            </li>
+          </ul>
+        </div>
+        <div class="icon-box text-center col-12 col-md-6">
           <ul class="d-flex justify-content-center list-unstyled">
             <li class="px-2 pt-2">
               <a href="#">
@@ -54,24 +56,41 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .footer {
   font-weight: 900;
+  background-color: #667B68;
+  li a {
+    font-size: 20px;
+    display: block;
+  }
 }
-.footer li a{
-  font-size: 20px;
-  display: block;
-}
-.icon-box i{
+.icon-box i {
   font-size: 28px;
-  color: white;
+  color: #fff;
+  &:hover {
+    color:#000;
+  }
 }
-.icon-box i:hover{
-  color: #21203B;
-}
-.copyright p{
-  color: white;
+.copyright p {
+  color: #fff;
   text-align: center;
+}
+.menu-list {
+  a {
+    color: #fff;
+    &:hover {
+      color: #000;
+    }
+  }
+}
+.list1 {
+  text-align: center;
+}
+@media screen and (max-width: 767px){
+  .list2 {
+    text-align: center;
+  }
 }
 @media screen and (max-width: 576px){
   .menu-list .nav-link{
@@ -79,11 +98,6 @@ export default {
   }
   .icon-box i{
     font-size: 24px;
-  }
-}
-@media screen and (min-width: 321px) and (max-width: 576px){
-  .menu-list .nav-link{
-    max-width: 70px;
   }
 }
 </style>

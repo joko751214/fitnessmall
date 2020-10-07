@@ -5,34 +5,34 @@
     </div>
     <table class="table mt-4">
       <thead class="thead-dark">
-          <tr>
-              <th>名稱</th>
-              <th>折扣百分比</th>
-              <th>到期日</th>
-              <th>是否啟用</th>
-              <th>編輯</th>
-          </tr>
+        <tr>
+          <th>名稱</th>
+          <th>折扣百分比</th>
+          <th>到期日</th>
+          <th>是否啟用</th>
+          <th>編輯</th>
+        </tr>
       </thead>
       <tbody>
-          <tr v-for='(coupon, key) in coupons' :key='key'>
-              <td>{{ coupon.title }}</td>
-              <td>{{ coupon.percent }}%</td>
-              <td>{{ coupon.deadline.datetime }}</td>
-              <td>
-                <span v-if='coupon.enabled' class="text-success">啟用</span>
-                <span v-else>未啟用</span>
-              </td>
-              <td>
-                <div class="btn-group">
-                  <button type="button"
-                  class="btn btn-outline-primary btn-sm"
-                  @click="openModal('edit', coupon)">編輯</button>
-                  <button type="button"
-                  class="btn btn-outline-danger btn-sm"
-                  @click="openModal('delete', coupon)">刪除</button>
-                </div>
-              </td>
-          </tr>
+        <tr v-for='(coupon, key) in coupons' :key='key'>
+          <td>{{ coupon.title }}</td>
+          <td>{{ coupon.percent }}%</td>
+          <td>{{ coupon.deadline.datetime }}</td>
+          <td>
+            <span v-if='coupon.enabled' class="text-success">啟用</span>
+            <span v-else>未啟用</span>
+          </td>
+          <td>
+            <div class="btn-group">
+              <button type="button"
+              class="btn btn-outline-primary btn-sm"
+              @click="openModal('edit', coupon)">編輯</button>
+              <button type="button"
+              class="btn btn-outline-danger btn-sm"
+              @click="openModal('delete', coupon)">刪除</button>
+            </div>
+          </td>
+        </tr>
       </tbody>
     </table>
 

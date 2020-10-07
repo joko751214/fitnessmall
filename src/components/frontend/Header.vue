@@ -1,13 +1,26 @@
 <template>
-  <!-- <header class="jumbotron rounded-0">
-    <div class="container">
-      <h1 data-0="transform: translateY(-50px)"
-      data-500="transform: translateY(80px)">享受蔬食的喜悅與美好</h1>
-      <hr/>
-      <h4>均衡飲食是健康的必要條件</h4>
-    </div>
+  <!-- <header class='jumbotron'>
+    <div class="container"></div>
   </header> -->
-  <div class="container">
+  <div class="header">
+    <div class="container">
+      <div class="jumbotron p-0 m-0">
+        <!-- <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/LOuEOLJQsyI3atxgmUbuWQjS9wuWlEi7Q8Zqn7b9U7kRaFvX5YjfGkhMwL9MiAse5zLS8AsxJiNArd0rIWjD2qcrgISYXOXkx7wmmh0HpY7pR7gedknz58n0ShHPCzes.jpg" alt=""> -->
+        <ul class="header-text">
+          <li>
+            <h2>健康 美味 沙拉野餐</h2>
+          </li>
+          <li>
+            <p>品嘗生菜的鮮甜爽脆</p>
+          </li>
+          <li>
+            <router-link class="nav-link" to="/products">吃吃看</router-link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="container coverflow">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -24,10 +37,6 @@
         </div>
         <div class="carousel-item">
           <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/lNBA5vwM6bSaI45KCdUwMnVinM1VxFEq5HpgTLZDDM9DyZ3l9jzwi0HYjZLiTXeEhgyh7Eams9Sxh3NShYbiTbzH5qnrWCmxM4MF5HYxyGgQFqJlajhjfUmsfEgb6Zrr.jpg" class="carouselImg" alt="輪播美食圖">
-          <div class="carousel-text">
-            <h2>健康 美味 沙拉野餐</h2>
-            <p>品嘗生菜的鮮甜爽脆</p>
-          </div>
         </div>
         <div class="carousel-item">
           <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/ZGelWqLa324LilC78Bf1tT5vBTxar6OtbGdxtmNAtUxs6EurC6lxZtKCfYiI5QRV7b8nqmIw15BXzaztwB3CclWt2aLSfpO3QE3xbg3sTb7tAmlGYIRLY8vLZoQLhGQq.jpg" class="carouselImg" alt="輪播美食圖">
@@ -48,45 +57,33 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-  </div>
+  </div> -->
 </template>
 
-<script>
-export default {
-
-};
-</script>
-
-<style>
-/* .jumbotron {
-  text-align: center;
-  background-image: url(https://hexschool-api.s3.us-west-2.amazonaws.com/custom/7CWruTfUDAMEDSnjSofXOvW0EWdSHdgovex4uEdOMdxWzBoWFV05sFDefhFjAoCYcIc1JXxaaoTJCkvHySOH23a9AC9S7wPcN50q5yJTwAusY1wWyYBOtarrgS6nMuhu.jpg);
+<style lang="scss">
+.header {
+  background-color: #eae5df;
+}
+.jumbotron {
+  background-image: url(https://images.unsplash.com/photo-1522248105696-9625ba87de6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80);
   background-size: cover;
-  background-attachment: fixed;
-  margin-bottom: 0;
+  position: relative;
+  height: 500px;
+  // img {
+  //   width: 100%;
+  //   display: block;
+  //   // height: 50%;
+  // }
 }
-.jumbotron .container {
-  color: white;
-  padding: 200px 0px;
-}
-.jumbotron h1 {
-  font-weight: 900;
-}
-.jumbotron hr {
-  max-width: 50px;
-  border: 2px solid #ff6e3a;
-}
-.jumbotron h4 {
-  color: rgba(255, 255, 255, 0.5);
-  font-weight: 900;
-} */
 .carousel-item {
   position: relative;
 }
 .carouselImg {
-  width: 100%;
+  width: 70%;
+  display: block;
+  margin: 0 auto;
 }
-.carousel-text {
+.header-text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -94,6 +91,7 @@ export default {
   padding: 15px 20px 0px 20px;
   color: #37523d;
   text-align: center;
+  text-decoration: none;
 }
 .carousel-text h2 {
   font-weight: bold;

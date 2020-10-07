@@ -36,7 +36,7 @@ library.add(fas, far);
 Vue.filter('currency', currencyFilter);
 
 Vue.use(Loading, {
-  canCancel: true, // default false
+  canCancel: true,
   color: '#000000',
   loader: 'dots',
   width: 64,

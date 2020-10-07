@@ -12,7 +12,6 @@ import Sidebar from '@/components/frontend/Sidebar.vue';
 import Footer from '@/components/frontend/Footer.vue';
 
 export default {
-  name: 'Home',
   components: {
     Sidebar,
     Footer,
@@ -31,7 +30,7 @@ export default {
   font-family: 'Microsoft JhengHei', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6.h1, .h2, .h3, .h4, .h5, .h6 {
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-weight: bold;
 }
 

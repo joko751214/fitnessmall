@@ -16,7 +16,7 @@
         <h2 class="font-weight-bold h1 mb-5">{{ product.title }}</h2>
         <p class="mt-3">{{ product.content }}</p>
         <p class="text-muted"
-        style="font-size: 8px;">{{ product.description }}</p>
+        style="font-size: 12px;">{{ product.description }}</p>
         <p class="mb-0 text-muted text-right">
           <del>{{ product.origin_price | currency }}</del>
         </p>

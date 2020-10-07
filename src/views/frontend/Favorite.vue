@@ -98,7 +98,6 @@ export default {
         .then((res) => {
           this.products = res.data.data;
           this.getFollow();
-          console.log(this.followProducts);
           loader.hide();
         }).catch((err) => {
           this.$swal(
