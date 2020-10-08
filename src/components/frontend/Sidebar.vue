@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar py-1 fixed-top navbar-expand-md navbar-top">
     <div class="container">
-      <router-link class="navbar-brand" to="/">Fitnessmall</router-link>
+      <router-link class="navbar-brand" to="/" exact>Fitnessmall</router-link>
       <button class="navbar-toggler navbar-light" type="button"
       data-toggle="collapse"
       data-target="#backendNavbar"
@@ -29,11 +29,19 @@
 </template>
 
 <script>
+/* global $ */
+$('.navbar .navbar-nav a').on('click', () => {
+  $('.navbar .navbar-nav').find('li.active').removeClass('active');
+  $(this).parent('li').addClass('active');
+});
 export default {
   data() {
     return {
       cartNum: 0,
     };
+  },
+  created() {
+    console.log(this);
   },
 };
 </script>
@@ -72,10 +80,8 @@ export default {
     }
 }
 @media screen and (min-width: 768px) {
-    .nav-link {
-      &:active {
+    .nav-link.router-link-active {
         border-bottom: solid#FFFFFF 3px;
-      }
     }
   }
 </style>

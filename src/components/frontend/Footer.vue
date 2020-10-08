@@ -16,7 +16,7 @@
           <ul class="list-unstyled mb-0">
             <li class="nav-item menu-list list2">
               <router-link to="/"
-                          class="nav-link px-0">
+                          class="nav-link px-0" exact>
                 關於我們
               </router-link>
             </li>
@@ -62,7 +62,7 @@ export default {
   background-color: #667B68;
   li a {
     font-size: 20px;
-    // display: block;
+    display: inline-block;
   }
 }
 .icon-box i {

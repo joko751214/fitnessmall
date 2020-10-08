@@ -43,6 +43,7 @@ const routes = [
     component: () => import('../views/backend/layout/Dashboard.vue'),
     children: [
       {
+        name: 'products',
         path: 'products',
         component: () => import('../views/backend/Products.vue'),
       },

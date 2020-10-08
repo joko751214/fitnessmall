@@ -172,7 +172,7 @@ export default {
     transform: translateX(0px);
   }
   .imgWrap2 {
-    transition-delay: .2s;
+    transition-delay: .1s;
   }
   .imgWrap3 {
     transition-delay: .3s;
