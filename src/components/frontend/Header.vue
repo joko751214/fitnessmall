@@ -1,10 +1,7 @@
 <template>
-  <!-- <header class='jumbotron'>
-    <div class="container"></div>
-  </header> -->
   <div class="header">
     <div class="container">
-      <div class="jumbotron p-0 m-0"></div>
+      <div class="jumbotron p-0 m-0 rounded-0"></div>
       <ul class="header-text">
         <li>
           <h2>健康 美味 沙拉野餐</h2>
@@ -32,7 +29,8 @@
 .header-text {
   position: absolute;
   top: 30%;
-  left: 50%;
+  left: 30%;
+  transform: translateX(-30%) translateY(-30%);
   background: rgba(255,255,255,0.8);
   padding: 15px 20px;
   color: #37523d;
@@ -58,6 +56,7 @@
     position: relative;
     top: 0;
     left: 0;
+    transform: initial;
   }
 }
 @media screen and (max-width: 767px){

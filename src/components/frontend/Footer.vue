@@ -59,7 +59,7 @@ export default {
 <style lang="scss">
 .footer {
   font-weight: 900;
-  background-color: #667B68;
+  background-color: #37523d;
   li a {
     font-size: 20px;
     display: inline-block;
@@ -69,7 +69,7 @@ export default {
   font-size: 28px;
   color: #fff;
   &:hover {
-    color:#000;
+    color:#d2e8da;
   }
 }
 .copyright p {
@@ -80,7 +80,7 @@ export default {
   a {
     color: #fff;
     &:hover {
-      color: #000;
+      color: #d2e8da;
     }
   }
 }

@@ -29,11 +29,6 @@
 </template>
 
 <script>
-/* global $ */
-$('.navbar .navbar-nav a').on('click', () => {
-  $('.navbar .navbar-nav').find('li.active').removeClass('active');
-  $(this).parent('li').addClass('active');
-});
 export default {
   data() {
     return {
@@ -44,12 +39,11 @@ export default {
 </script>
 <style lang="scss">
 .navbar-top {
-  background-color: #667B68;
-  font-weight: 900;
+  background-color: #37523d;
   a {
     color: white;
     &:hover {
-      color: #000;
+      color: #d2e8da;
     }
   }
 }
@@ -78,7 +72,7 @@ export default {
 }
 @media screen and (min-width: 768px) {
     .nav-link.router-link-active {
-        border-bottom: solid#FFFFFF 3px;
+        border-bottom: solid #fff 3px;
     }
   }
 </style>

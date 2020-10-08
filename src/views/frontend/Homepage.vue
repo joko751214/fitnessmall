@@ -9,11 +9,8 @@
             <h1 v-scrollanimation>美食饗味</h1>
             <hr/>
           </div>
-          <div class="col-md-4 col-sm-6 imgWrap1 text" v-scrollanimation>
+          <div class="col-md-4 col-sm-4 imgWrap1 text" v-scrollanimation>
             <router-link :to="{ name: 'products', params: { categoryName: '早餐套餐' }}">
-              <div class='item-img'>
-                <div class="more">了解更多</div>
-              </div>
               <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/gNZMjc9wYCw7larB8Vz3G54XLTMeIJls2Wt3PrTj98HXGvgexZJgqvainahOSYUYCfK80DeyfZYBfJxlzVPZmMZ9pTpH9THnFhJfLmGoISjtydX2uDZXYJHjIIEambSo.jpg" alt="美味的餐點"/>
             </router-link>
             <h3>早餐</h3>
@@ -21,11 +18,8 @@
             每天都拿不定主意早餐要吃什麼嗎?快來FITNESMALL挑選美味可口的早餐，讓你每天早晨活力充沛、健康滿滿。
             </p>
           </div>
-          <div class="col-md-4 col-sm-6 imgWrap2 text" v-scrollanimation>
+          <div class="col-md-4 col-sm-4 imgWrap2 text" v-scrollanimation>
             <router-link :to="{ name: 'products', params: { categoryName: '沙拉' }}">
-              <div class='item-img'>
-                <div class="more">了解更多</div>
-              </div>
               <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/LaogsHFcz3Jf2t7qFOV03m5lQzMN0Sr5WhVWCWKnUWyE9dTDcpQch7CH5qK4fmxEZSscjqZ34M5aFKJFYYJ6Ae01fhXWZKlZ3vVEt2vJbPknFaxlPThbAYMSwBunn0oS.jpg" alt="美味的餐點"/>
             </router-link>
             <h3>沙拉</h3>
@@ -33,11 +27,8 @@
             新鮮沙拉為FITNESSMALL最經典的產品，採用豐富的萵苣、蘿蔓、歐式生菜與蔬果，點綴自製的美味醬料，品嘗生菜的鮮甜爽脆。
             </p>
           </div>
-          <div class="col-md-4 col-sm-6 imgWrap3 text" v-scrollanimation>
+          <div class="col-md-4 col-sm-4 imgWrap3 text" v-scrollanimation>
             <router-link :to="{ name: 'products', params: { categoryName: '水果拼盤' }}">
-              <div class='item-img'>
-                <div class="more">了解更多</div>
-              </div>
               <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/15nWEV7ZEpByyF3raxzmviII2DYK7qmmQjAsoC0hILRQuJUT9SsIsACaQOQpl53gsDaNiOCcZpo7ahAdbRsmeFpnhJR9YlievGkLmIVgDIU0gg9MUBXl71fQfWKlzeve.jpg" alt="美味的餐點"/>
             </router-link>
             <h3>水果拼盤</h3>
@@ -52,10 +43,10 @@
       <div class="container">
         <h2 class='about-us-title'>about us</h2>
         <div class="row">
-          <div class="col-md-5">
-            <img class='about-us-image' src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/YlriFvjFlOWPowIagZzxcrHczCSPC9ljc0RvaBv9mXuAYwlZU9PtbEDxn6dTi32MloSMEiIPntbMe13KItm1BnpP5KBiapA5rZyzHPXcjjgvWZe8A1yC55NomkbWLImH.jpg" alt="AboutUsImage">
+          <div class="col-lg-5">
+            <img class='about-us-image first' src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/YlriFvjFlOWPowIagZzxcrHczCSPC9ljc0RvaBv9mXuAYwlZU9PtbEDxn6dTi32MloSMEiIPntbMe13KItm1BnpP5KBiapA5rZyzHPXcjjgvWZe8A1yC55NomkbWLImH.jpg" alt="AboutUsImage">
           </div>
-          <div class="col-md-7">
+          <div class="col-md-12 col-lg-7">
             <p class='about-us-text'>
               來自法國的三星主廚說：生活必須是一件愉快的事情，這一切應該從你的早餐開始。
               FITNESSMALL秉持著「買得起也要吃的飽」的經營理念，
@@ -149,14 +140,6 @@ export default {
     a {
       display: block;
       position: relative;
-      &:hover {
-        .item-img {
-          opacity: 1;
-        }
-        .caption {
-          transform: translateY(0px);
-        }
-      }
     }
   }
   img {
@@ -276,6 +259,11 @@ export default {
   transition: transform .5s ease;
   color: #fff;
 }
+@media screen and (max-width: 991px){
+  .first {
+    display: none;
+  }
+}
 
 @media screen and (max-width: 767px) {
   .section_about .imgWrap2 {
@@ -289,6 +277,10 @@ export default {
   }
   .foodImg {
     display: none;
+  }
+  .imgWrap1,.imgWrap2,.imgWrap3 {
+    width: 80%;
+    margin: 0 auto;
   }
 }
 </style>
