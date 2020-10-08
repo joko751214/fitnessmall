@@ -207,12 +207,6 @@ export default {
 .heart {
   color: red;
 }
-.swal-modal{
-  width: 300px;
-  position: absolute;
-  top: 0;
-  right: 35px;
-}
 
 @media screen and (max-width: 1200px){
   .tag {

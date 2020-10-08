@@ -40,9 +40,6 @@ export default {
       cartNum: 0,
     };
   },
-  created() {
-    console.log(this);
-  },
 };
 </script>
 <style lang="scss">

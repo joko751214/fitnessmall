@@ -128,7 +128,6 @@ export default {
       const loader = this.$loading.show();
       this.$http.get(api)
         .then((res) => {
-          console.log(res);
           this.storages = res.data.data;
           loader.hide();
         })
