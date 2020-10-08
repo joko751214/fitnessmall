@@ -31,7 +31,7 @@
 }
 .header-text {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   background: rgba(255,255,255,0.8);
   padding: 15px 20px;
@@ -46,9 +46,6 @@
     background-color: rgb(122, 153, 108);
     color: #fff;
     &:hover {
-      background-color: #37523d;
-    }
-    &:active {
       background-color: #37523d;
     }
   }

@@ -10,7 +10,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="backendNavbar">
-        <div class="nav navbar-nav ml-auto">
+        <ul class="nav navbar-nav ml-auto">
           <li class="nav-item">
             <router-link class="nav-link" to="/favorite">
               <i class="fas fa-heart"></i>
@@ -22,7 +22,7 @@
           <li class="nav-item">
             <router-link class="nav-link" to="/cart">購物車 CART</router-link>
           </li>
-        </div>
+        </ul>
       </div>
     </div>
   </nav>
@@ -72,8 +72,10 @@ export default {
     }
 }
 @media screen and (min-width: 768px) {
-    .router-link-active {
-      border-bottom: solid #FFFFFF 3px;
+    .nav-link {
+      &:active {
+        border-bottom: solid#FFFFFF 3px;
+      }
     }
   }
 </style>

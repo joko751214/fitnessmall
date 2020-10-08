@@ -62,16 +62,13 @@ export default {
   background-color: #667B68;
   li a {
     font-size: 20px;
-    display: block;
+    // display: block;
   }
 }
 .icon-box i {
   font-size: 28px;
   color: #fff;
   &:hover {
-    color:#000;
-  }
-  &:active {
     color:#000;
   }
 }
@@ -83,9 +80,6 @@ export default {
   a {
     color: #fff;
     &:hover {
-      color: #000;
-    }
-    &:active {
       color: #000;
     }
   }
