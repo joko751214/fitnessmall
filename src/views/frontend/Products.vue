@@ -2,7 +2,7 @@
   <div class="container ec-container" style="margin-top: 7rem;margin-bottom: 5rem;">
     <div class="row product" v-if="products.length > 0">
       <div class="col-lg-2 col-md-3 mb-3">
-        <ul class="list-group sticky-top rounded-0">
+        <ul class="list-group rounded-0">
           <a href="#"
               class="list-group-item list-group-item-action"
               @click.prevent="filterCategory = ''"
@@ -211,6 +211,12 @@ export default {
 @media screen and (max-width: 1200px){
   .tag {
     width: 80%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .list-group {
+    position: sticky;
+    top: 85px;
   }
 }
 @media screen and (max-width: 576px){
