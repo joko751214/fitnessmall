@@ -1,31 +1,33 @@
 <template>
-  <nav class="navbar py-1 fixed-top navbar-expand-md navbar-top">
+  <div class="sticky-top">
     <div class="container">
-      <router-link class="navbar-brand" to="/" exact>Fitnessmall</router-link>
-      <button class="navbar-toggler navbar-light" type="button"
-      data-toggle="collapse"
-      data-target="#backendNavbar"
-      aria-expanded="false"
-      aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="backendNavbar">
-        <ul class="nav navbar-nav ml-auto">
-          <li class="nav-item">
-            <router-link class="nav-link" to="/favorite">
-              <i class="fas fa-heart"></i>
-            </router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link" to="/products">菜單 MENU</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link" to="/cart">購物車 CART</router-link>
-          </li>
-        </ul>
-      </div>
+      <nav class="navbar py-1 navbar-expand-lg navbar-top">
+        <router-link class="navbar-brand" to="/" exact>Fitnessmall</router-link>
+        <button class="navbar-toggler navbar-light" type="button"
+        data-toggle="collapse"
+        data-target="#backendNavbar"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="backendNavbar">
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+              <router-link class="nav-link" to="/favorite">
+                <i class="fas fa-heart"></i>
+              </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/products">菜單 MENU</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/cart">購物車 CART</router-link>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
-  </nav>
+  </div>
 </template>
 
 <script>
@@ -38,8 +40,10 @@ export default {
 };
 </script>
 <style lang="scss">
-.navbar-top {
+.sticky-top {
   background-color: #37523d;
+}
+.navbar-top {
   a {
     color: white;
     &:hover {

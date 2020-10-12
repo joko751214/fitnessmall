@@ -40,4 +40,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .container {
   color: black;
 }
+body,html {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
 </style>

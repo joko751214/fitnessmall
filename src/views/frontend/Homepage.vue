@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class='layout'>
     <Sidebar/>
     <Header/>
     <div class="container">
@@ -38,39 +38,6 @@
           </div>
         </div>
       </section>
-    </div>
-    <div class='about_us'>
-      <div class="container">
-        <h2 class='about-us-title'>about us</h2>
-        <div class="row">
-          <div class="col-lg-5">
-            <img class='about-us-image first' src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/YlriFvjFlOWPowIagZzxcrHczCSPC9ljc0RvaBv9mXuAYwlZU9PtbEDxn6dTi32MloSMEiIPntbMe13KItm1BnpP5KBiapA5rZyzHPXcjjgvWZe8A1yC55NomkbWLImH.jpg" alt="AboutUsImage">
-          </div>
-          <div class="col-md-12 col-lg-7">
-            <p class='about-us-text'>
-              來自法國的三星主廚說：生活必須是一件愉快的事情，這一切應該從你的早餐開始。
-              FITNESSMALL秉持著「買得起也要吃的飽」的經營理念，
-              除了要給消費者一個"專屬於您"的感覺外，也要在消費者的心中建立起"FITNESSMALL的早餐是專屬為我現做的"。
-            </p>
-            <p>
-              於是，我們堅持，是必須從拒絕開始，捨去過度奢華的裝潢，回歸最原本的初衷，保留原粹食材的真實性，希望從你第一口咬的那一刻起，就會知道擁有真實的感受。
-            </p>
-            <p>
-              歷經的這些日子，FITNESSMALL也逐漸的烙印在消費者心中，並陪伴著無數的早晨，努力打造一份活力早餐，成就一個事業。
-            </p>
-          </div>
-        </div>
-        <div class="row" style="margin-top: 15px;">
-          <div class="col-md-6 pr-0">
-            <img class='about-us-image' src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/CoGak7heELUpEfEOVBPu0AGx3AYP8xFQDghQRs22n3KLO35IfC3cww4plgZOfpN93lul6WVpxpdlmLyojNT1CXvBZf2aTdl4pUe7ILPuGorWQfOKInfh4ReufEZvrKbp.jpg" alt="AboutUsImage">
-          </div>
-          <div class="col-md-6">
-            <img class='about-us-image' src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/uSl9X6odnWfhVtl9LcxjeSkQuW7nQmF5chfwtm8S2aY7BPQAIPsDYLGRTphxYA7k2jWdWWeMV1Er51bNDSWDsr8wGKTXcs3M0uBrROlUJsqSIoLxRtr7TsENKHL3R4xs.jpg" alt="AboutUsImage">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
       <section class="section_story">
         <div class="row">
           <div class="col-md-5 pr-0 foodImg" v-scrollanimation></div>
@@ -104,6 +71,39 @@
           </div>
         </div>
       </section>
+    </div>
+    <div class='about_us'>
+      <div class="container">
+        <h2 class='about-us-title'>about us</h2>
+        <div class="row">
+          <div class="col-lg-5">
+            <img class='about-us-image first' src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/YlriFvjFlOWPowIagZzxcrHczCSPC9ljc0RvaBv9mXuAYwlZU9PtbEDxn6dTi32MloSMEiIPntbMe13KItm1BnpP5KBiapA5rZyzHPXcjjgvWZe8A1yC55NomkbWLImH.jpg" alt="AboutUsImage">
+          </div>
+          <div class="col-md-12 col-lg-7">
+            <p class='about-us-text'>
+              來自法國的三星主廚說：生活必須是一件愉快的事情，這一切應該從你的早餐開始。
+              FITNESSMALL秉持著「買得起也要吃的飽」的經營理念，
+              除了要給消費者一個"專屬於您"的感覺外，也要在消費者的心中建立起"FITNESSMALL的早餐是專屬為我現做的"。
+            </p>
+            <p>
+              於是，我們堅持，是必須從拒絕開始，捨去過度奢華的裝潢，回歸最原本的初衷，保留原粹食材的真實性，希望從你第一口咬的那一刻起，就會知道擁有真實的感受。
+            </p>
+            <p>
+              歷經的這些日子，FITNESSMALL也逐漸的烙印在消費者心中，並陪伴著無數的早晨，努力打造一份活力早餐，成就一個事業。
+            </p>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 15px;">
+          <div class="col-md-6 pr-0">
+            <img class='about-us-image' src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/CoGak7heELUpEfEOVBPu0AGx3AYP8xFQDghQRs22n3KLO35IfC3cww4plgZOfpN93lul6WVpxpdlmLyojNT1CXvBZf2aTdl4pUe7ILPuGorWQfOKInfh4ReufEZvrKbp.jpg" alt="AboutUsImage">
+          </div>
+          <div class="col-md-6">
+            <img class='about-us-image' src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/uSl9X6odnWfhVtl9LcxjeSkQuW7nQmF5chfwtm8S2aY7BPQAIPsDYLGRTphxYA7k2jWdWWeMV1Er51bNDSWDsr8wGKTXcs3M0uBrROlUJsqSIoLxRtr7TsENKHL3R4xs.jpg" alt="AboutUsImage">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
     </div>
     <Footer/>
   </div>
