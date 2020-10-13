@@ -8,6 +8,7 @@
         <tr>
           <th>#</th>
           <th>圖片</th>
+          <th>路徑</th>
           <th>操作</th>
         </tr>
       </thead>
@@ -17,6 +18,7 @@
           <td>
             <img class="img-fluid" width='100px' :src="item.path" alt="美味的餐點">
           </td>
+          <td width='50'>{{ item.path }}</td>
           <td style="vertical-align: middle">
             <div class="btn-group">
               <button type="button"

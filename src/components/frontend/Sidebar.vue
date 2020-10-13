@@ -1,5 +1,5 @@
 <template>
-  <div class="sticky-top">
+  <div class="sidebar sticky-top">
     <div class="container">
       <nav class="navbar py-1 navbar-expand-lg navbar-top">
         <router-link class="navbar-brand" to="/" exact>Fitnessmall</router-link>
@@ -40,7 +40,7 @@ export default {
 };
 </script>
 <style lang="scss">
-.sticky-top {
+.sidebar {
   background-color: #37523d;
 }
 .navbar-top {

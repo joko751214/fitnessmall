@@ -19,7 +19,7 @@
 
 <style lang="scss">
 .header {
-  background-color: #eae5df;
+  position: relative;
 }
 .jumbotron {
   background: url('https://images.unsplash.com/photo-1522248105696-9625ba87de6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80') right top;
@@ -28,9 +28,9 @@
 }
 .header-text {
   position: absolute;
-  top: 30%;
-  left: 30%;
-  transform: translateX(-30%) translateY(-30%);
+  top: 50%;
+  left: 35%;
+  transform: translateX(-35%) translateY(-50%);
   background: rgba(255,255,255,0.8);
   padding: 15px 20px;
   color: #37523d;

@@ -11,7 +11,7 @@
           </div>
           <div class="col-md-4 col-sm-4 imgWrap1 text" v-scrollanimation>
             <router-link :to="{ name: 'products', params: { categoryName: '早餐套餐' }}">
-              <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/gNZMjc9wYCw7larB8Vz3G54XLTMeIJls2Wt3PrTj98HXGvgexZJgqvainahOSYUYCfK80DeyfZYBfJxlzVPZmMZ9pTpH9THnFhJfLmGoISjtydX2uDZXYJHjIIEambSo.jpg" alt="美味的餐點"/>
+              <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/L8EjT0Bh3GHx9K1mgYrktv3d9yXW9V4qk94jtLbNFzr3fTPP22Myd1Cf3GqyvX7PIsHoSIiqXoxVkQjBfAhFqF3Gb0aqHqOPpjqz88459J4IMZbWEy0ouuVuobNu4eMh.jpg" alt="美味的餐點"/>
             </router-link>
             <h3>早餐</h3>
             <p>
@@ -20,7 +20,7 @@
           </div>
           <div class="col-md-4 col-sm-4 imgWrap2 text" v-scrollanimation>
             <router-link :to="{ name: 'products', params: { categoryName: '沙拉' }}">
-              <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/LaogsHFcz3Jf2t7qFOV03m5lQzMN0Sr5WhVWCWKnUWyE9dTDcpQch7CH5qK4fmxEZSscjqZ34M5aFKJFYYJ6Ae01fhXWZKlZ3vVEt2vJbPknFaxlPThbAYMSwBunn0oS.jpg" alt="美味的餐點"/>
+              <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/hRBzM30Bbmihc3DkCqh1pdc51dJPW7tQOj0barwWJ7g2C0n89hiZwftTw9iWEtvrdNKAkBsLu9WulRSQicqnaVkcPFVdKw26lEhPLyyD4X6q10hCGgiGpUlrEAW5PTi5.jpg" alt="美味的餐點"/>
             </router-link>
             <h3>沙拉</h3>
             <p>
@@ -29,7 +29,7 @@
           </div>
           <div class="col-md-4 col-sm-4 imgWrap3 text" v-scrollanimation>
             <router-link :to="{ name: 'products', params: { categoryName: '水果拼盤' }}">
-              <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/15nWEV7ZEpByyF3raxzmviII2DYK7qmmQjAsoC0hILRQuJUT9SsIsACaQOQpl53gsDaNiOCcZpo7ahAdbRsmeFpnhJR9YlievGkLmIVgDIU0gg9MUBXl71fQfWKlzeve.jpg" alt="美味的餐點"/>
+              <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/wkrO92d6I4Esz1ESVRLKygQzYCxxG473KjiwCgAlhJdPRcA5NyvWDW7LwXDzMU0lG5fwQxXkuAulRat4TCUh8xh2CaHo8u6dsDlvn6Io819HBL4vWbpOh3V0FMmImqN3.jpg" alt="美味的餐點"/>
             </router-link>
             <h3>水果拼盤</h3>
             <p>
@@ -141,9 +141,11 @@ export default {
       display: block;
       position: relative;
     }
-  }
-  img {
-    width: 100%;
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
   }
   .before-enter {
     opacity: 0;
@@ -165,7 +167,6 @@ export default {
 .about_us {
   background: #e0ece4;
   padding: 50px 0px;
-  margin-bottom: 50px;
 }
 .about-us-title {
   font-family: 'Great Vibes', cursive;
@@ -176,6 +177,8 @@ export default {
 .about-us-image {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center center;
   border-radius: 20px;
 }
 .about-us-text {
@@ -278,7 +281,7 @@ export default {
   .foodImg {
     display: none;
   }
-  .imgWrap1,.imgWrap2,.imgWrap3 {
+  .imgWrap1, .imgWrap2, .imgWrap3 {
     width: 80%;
     margin: 0 auto;
   }

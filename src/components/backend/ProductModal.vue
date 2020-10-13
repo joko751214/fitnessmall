@@ -71,8 +71,7 @@
               <hr>
               <div class="form-group">
                 <label for="description">產品描述</label>
-                <textarea id='description' v-model="product.description"
-                class="form-control" placeholder="請輸入產品描述" required></textarea>
+                <vue-editor id='description' v-model="product.description" required/>
               </div>
               <div class="form-group">
                 <label for="content">說明內容</label>
@@ -101,9 +100,13 @@
 
 <script>
 /* global $ */
+import { VueEditor } from 'vue2-editor';
 
 export default {
   props: ['tempProduct'],
+  components: {
+    VueEditor,
+  },
   data() {
     return {
       product: {
@@ -126,11 +129,12 @@ export default {
       }
       this.status = true;
       this.$http[httpMethod](api, this.product)
-        .then(() => {
+        .then((res) => {
           this.$emit('update');
           this.status = false;
           $('#productModal').modal('hide');
           this.product = {};
+          console.log(res);
         }).catch((err) => {
           this.$swal(
             '商品更新失敗',
@@ -190,6 +194,11 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+@import "~vue2-editor/dist/vue2-editor.css";
 
+/* Import the Quill styles you want */
+@import '~quill/dist/quill.core.css';
+@import '~quill/dist/quill.bubble.css';
+@import '~quill/dist/quill.snow.css';
 </style>
