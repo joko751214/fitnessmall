@@ -20,6 +20,7 @@
 <style lang="scss">
 .header {
   position: relative;
+  background-color: #e0ece4;
 }
 .jumbotron {
   background: url('https://images.unsplash.com/photo-1522248105696-9625ba87de6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80') right top;

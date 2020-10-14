@@ -41,14 +41,11 @@ export default {
 </script>
 <style lang="scss">
 .sidebar {
-  background-color: #37523d;
+  background-color: #478069;
 }
 .navbar-top {
   a {
     color: white;
-    &:hover {
-      color: #d2e8da;
-    }
   }
 }
 .nav-link {

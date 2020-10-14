@@ -44,7 +44,7 @@
               <p class="card-text mb-0 price">{{ item.price | currency }}
                 <span class="text-muted"><del>{{ item.origin_price | currency }}</del></span>
               </p>
-              <p class="text-muted" style="font-size: 12px;">{{ item.content }}</p>
+              <p class="text-muted">{{ item.content }}</p>
               <button class="btn btn-primary mt-2 btn-block text-white"
               @click="addToCart(item)">
                 <b-spinner small type='grow' v-if='statusId === item.id'></b-spinner>

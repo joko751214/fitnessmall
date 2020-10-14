@@ -17,7 +17,7 @@ export default {
 
 <style lang="scss">
 .footer {
-  background-color: #37523d;
+  background-color: #478069;
 }
 .copyright p {
   margin: 0;
