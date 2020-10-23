@@ -38,7 +38,7 @@
             <div class="bottom">
               <router-link :to="`/product/${ item.id }`">
                 <h4 class="mt-3 mb-2">
-                  {{item.title}}
+                  {{ item.title}}
                 </h4>
               </router-link>
               <p class="card-text mb-0 price">{{ item.price | currency }}
@@ -164,69 +164,51 @@ export default {
 };
 </script>
 
-<style>
-.ec-container {
-  min-height: 100vh;
-}
-.cart {
-  position: fixed;
-  right: 1%;
-  bottom: 30%;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.price {
-  color: red;
-}
-.top {
-  height: 200px;
-  overflow: hidden;
-}
-.tag {
-  width: 100%;
-  text-align: center;
-  transform: translate(115px,-185px) rotate(45deg);
-  color: white;
-  font-weight: 700;
-  padding: 5px 0px;
-  box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
-}
-.picture {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-}
-.tag i {
-  cursor: pointer;
-}
-.tag i:hover {
-  color: red;
-}
+<style lang="sass">
+.ec-container
+  min-height: 100vh
+  .cart
+    position: fixed
+    right: 1%
+    bottom: 30%
+    border-radius: 50%
+    cursor: pointer
+  .price
+    color: red
+  .top
+    height: 200px
+    overflow: hidden
+    .tag
+      width: 100%
+      text-align: center
+      transform: translate(115px,-185px) rotate(45deg)
+      color: white
+      font-weight: 700
+      padding: 5px 0px
+      box-shadow: 0px 0px 12px rgba(0,0,0,0.2)
+      i
+        cursor: pointer
+        &:hover
+          color: red
+      .heart
+        color: red
+    .picture
+      width: 100%
+      height: 100%
+      background-size: cover
+      background-position: center
 
-.heart {
-  color: red;
-}
-
-@media screen and (max-width: 1200px){
-  .tag {
-    width: 80%;
-  }
-}
-@media screen and (min-width: 769px) {
-  .list-group {
-    position: sticky;
-    top: 85px;
-  }
-}
-@media screen and (max-width: 576px){
-  .tag {
-    transform: translate(65%,-500%) rotate(45deg);
-  }
-}
-@media screen and (max-width: 375px){
-  .tag {
-    transform: translate(60%,-500%) rotate(45deg);
-  }
-}
+@media screen and (max-width: 1200px)
+  .tag
+    width: 80%
+@media screen and (min-width: 769px)
+  .list-group
+    position: sticky
+    top: 85px
+@media screen and (max-width: 576px)
+  .tag
+    transform: translate(65%,-500%) rotate(45deg)
+@media screen and (max-width: 375px)
+  .tag
+    transform: translate(60%,-500%) rotate(45deg)
 </style>

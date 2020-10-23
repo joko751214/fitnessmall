@@ -16,14 +16,12 @@ import {
 } from 'vee-validate';
 import zhTW from 'vee-validate/dist/locale/zh_TW.json';
 import * as rules from 'vee-validate/dist/rules';
-
 // 載入filter
 import currencyFilter from './filters/currency';
 // bus
 import './bus';
 import App from './App.vue';
 import router from './router';
-
 import ScrollAnimation from './directives/scrollanimation';
 
 // 將jquery設為全域
@@ -34,7 +32,6 @@ Vue.config.productionTip = false;
 library.add(fas, far);
 
 Vue.filter('currency', currencyFilter);
-
 Vue.use(Loading, {
   canCancel: true,
   color: '#000000',
@@ -47,18 +44,14 @@ Vue.use(Loading, {
 Vue.use(VueAxios, axios);
 Vue.use(BootstrapVue);
 Vue.use(VueSwal);
-
 Vue.component('Loading', Loading);
-
 // Form表單驗證
 Vue.component('ValidationProvider', ValidationProvider);
 Vue.component('ValidationObserver', ValidationObserver);
-
 // 添加驗證規則
 Object.keys(rules).forEach((rule) => {
   extend(rule, rules[rule]);
 });
-
 // 加入 Bootstrap 樣式設定
 configure({
   classes: {
@@ -70,7 +63,6 @@ configure({
 
 // 加入驗證的中文內容
 localize('tw', zhTW);
-
 Vue.directive('scrollanimation', ScrollAnimation);
 
 new Vue({

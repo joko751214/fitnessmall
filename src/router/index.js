@@ -63,7 +63,7 @@ const routes = [
   },
   {
     path: '/login',
-    component: () => import('../views//backend/Login.vue'),
+    component: () => import('../views/backend/Login.vue'),
   },
   {
     path: '*',

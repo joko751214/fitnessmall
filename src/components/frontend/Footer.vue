@@ -15,13 +15,11 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.footer {
-  background-color: #478069;
-}
-.copyright p {
-  margin: 0;
-  color: #fff;
-  text-align: center;
-}
+<style lang="sass">
+.footer
+  background-color: #478069
+  .copyright p
+    margin: 0
+    color: #fff
+    text-align: center
 </style>

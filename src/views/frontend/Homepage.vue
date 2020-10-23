@@ -123,167 +123,112 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.section_about {
-  padding: 50px 0px;
-  h1 {
-    color: #000;
-    font-weight: 900;
-  }
-  .text {
-    h3,p {
-      margin-top: 15px;
-    }
-    p {
-      color: rgba(0,0,0,.6);
-    }
-    a {
-      display: block;
-      position: relative;
-    }
-    img {
-      width: 100%;
-      object-fit: cover;
-      object-position: center center;
-    }
-  }
-  .before-enter {
-    opacity: 0;
-    transform: translateX(100px);
-    transition: all .5s cubic-bezier(.41,.01,.57,1.61);
-  }
-  .enter {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-  .imgWrap2 {
-    transition-delay: .1s;
-  }
-  .imgWrap3 {
-    transition-delay: .3s;
-  }
-}
+<style lang="sass">
+.section_about
+  padding: 50px 0px
+  h1
+    color: #000
+    font-weight: 900
+  .text
+    h3,p
+      margin-top: 15px
+    p
+      color: rgba(0,0,0,.6)
+    a
+      display: block
+      position: relative
+    img
+      width: 100%
+      object-fit: cover
+      object-position: center center
+  .before-enter
+    opacity: 0
+    transform: translateX(100px)
+    transition: all .5s cubic-bezier(.41,.01,.57,1.61)
 
-.about_us {
-  background: #e0ece4;
-  padding: 50px 0px;
-}
-.about-us-title {
-  font-family: 'Great Vibes', cursive;
-  text-align: center;
-  font-size: 60px;
-  color: #37523d;
-}
-.about-us-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
-  border-radius: 20px;
-}
-.about-us-text {
-  line-height: 35px;
-  font-weight: normal;
-}
+  .enter
+    opacity: 1
+    transform: translateX(0px)
 
-.section_story {
-  color: white;
-  margin-bottom: 50px;
-  text-align: center;
-  color: #000;
-  .foodImg {
-    background-image: url(https://hexschool-api.s3.us-west-2.amazonaws.com/custom/tedycYMX8MnNEGbu9PxjqZbJx1bkqS09HGv94yQ49D3PsGnM9itM6bZ19bsHHxBGO3rdnrZFyhwccPVkG0NptFKDFAYjLFH6jrKBFqteyz9zcN04HrwAFHUU3xWXNGxo.jpg);
-    background-repeat: no-repeat;
-    background-origin: content-box;
-  }
-  .features {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    i {
-      font-size: 40px;
-    }
-    .before-enter{
-      transform: scale(1.5);
-      opacity: 0;
-      transition: all .5s ease-out;
-    }
-    .enter{
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-  .before-enter {
-    background-size: 150%;
-    background-position: 0% 0%;
-    transition: all .5s ease-out;
-  }
-   .enter {
-    background-size: 100%;
-    background-position: 50% 50%;
-  }
-  .content {
-    .before-enter{
-      transform: scale(1.5);
-      opacity: 0;
-      transition: all .5s ease-out;
-    }
-    .enter{
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-}
-.story-info {
-  background-color: rgb(234, 229, 223);
-  padding: 20px;
-}
+  .imgWrap2
+    transition-delay: .1s
 
-.item-img{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  background-color: rgba(0,0,0,.4);
-  transition: opacity .5s ease;
-  z-index: 100;
-}
-.more{
-  font-size: 25px;
-  font-weight: 900;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  transform: translateY(-50%);
-  letter-spacing: 2px;
-  transition: transform .5s ease;
-  color: #fff;
-}
-@media screen and (max-width: 991px){
-  .first {
-    display: none;
-  }
-}
+  .imgWrap3
+    transition-delay: .3s
 
-@media screen and (max-width: 767px) {
-  .section_about .imgWrap2 {
-    transition-delay: 0s;
-  }
-  .section_about .imgWrap3 {
-    transition-delay: 0s;
-  }
-  .about-us-image {
-    display: none;
-  }
-  .foodImg {
-    display: none;
-  }
-  .imgWrap1, .imgWrap2, .imgWrap3 {
-    width: 80%;
-    margin: 0 auto;
-  }
-}
+.about_us
+  background: #e0ece4
+  padding: 50px 0px
+  .about-us-title
+    font-family: 'Great Vibes', cursive
+    text-align: center
+    font-size: 60px
+    color: #37523d
+  .about-us-image
+    width: 100%
+    height: 100%
+    object-fit: cover
+    object-position: center center
+    border-radius: 20px
+  .about-us-text
+    line-height: 35px
+    font-weight: normal
+
+.section_story
+  color: white
+  margin-bottom: 50px
+  text-align: center
+  color: #000
+  .before-enter
+    background-size: 150%
+    background-position: 0% 0%
+    transition: all .5s ease-out
+  .enter
+    background-size: 100%
+    background-position: 50% 50%
+  .foodImg
+    background-image: url(https://hexschool-api.s3.us-west-2.amazonaws.com/custom/tedycYMX8MnNEGbu9PxjqZbJx1bkqS09HGv94yQ49D3PsGnM9itM6bZ19bsHHxBGO3rdnrZFyhwccPVkG0NptFKDFAYjLFH6jrKBFqteyz9zcN04HrwAFHUU3xWXNGxo.jpg)
+    background-repeat: no-repeat
+    background-origin: content-box
+  .story-info
+    background-color: rgb(234, 229, 223)
+    padding: 20px
+  .features
+    margin-top: 40px
+    margin-bottom: 40px
+    i
+      font-size: 40px
+    .before-enter
+      transform: scale(1.5)
+      opacity: 0
+      transition: all .5s ease-out
+    .enter
+      transform: scale(1)
+      opacity: 1
+  .content
+    .before-enter
+      transform: scale(1.5)
+      opacity: 0
+      transition: all .5s ease-out
+    .enter
+      transform: scale(1)
+      opacity: 1
+
+@media screen and (max-width: 991px)
+  .first
+    display: none
+
+@media screen and (max-width: 767px)
+  .imgWrap2
+    transition-delay: 0s
+  .imgWrap3
+    transition-delay: 0s
+  .about-us-image
+    display: none
+  .foodImg
+    display: none
+  .imgWrap1, .imgWrap2, .imgWrap3
+    width: 80%
+    margin: 0 auto
+
 </style>

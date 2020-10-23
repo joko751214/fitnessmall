@@ -109,8 +109,7 @@ export default {
 };
 </script>
 
-<style>
-.price {
-  color: red;
-}
+<style lang="sass">
+.price
+  color: red
 </style>

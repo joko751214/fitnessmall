@@ -7,7 +7,7 @@
           @click.prevent='move(item.id)'>
         </div>
         <div class="card-body p-0">
-          <h4 class="mt-3 mb-2">{{item.title}}</h4>
+          <h4 class="mt-3 mb-2">{{ item.title }}</h4>
           <p class="card-text mb-0 price">{{ item.price | currency }}
             <span class="text-muted"><del>{{ item.origin_price | currency }}</del></span>
           </p>
@@ -95,11 +95,10 @@ export default {
 };
 </script>
 
-<style>
-.relatedPicture {
-  height: 200px;
-  background-size: cover;
-  background-position: center;
-  cursor: pointer;
-}
+<style lang="sass">
+.relatedPicture
+  height: 200px
+  background-size: cover
+  background-position: center
+  cursor: pointer
 </style>

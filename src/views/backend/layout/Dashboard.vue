@@ -24,12 +24,12 @@ export default {
     checkAuth() {
       this.token = document.cookie.replace(/(?:(?:^|.*;\s*)hexToken\s*=\s*([^;]*).*$)|^.*$/, '$1');
 
-      this.$http.defaults.headers.common.Authorization = `Bearer ${this.token}`;
-
       const url = `${process.env.VUE_APP_APIPATH}/auth/check`;
       this.$http.post(url, {
         api_token: this.token,
       }).then(() => {
+        // 驗證成功之後再加入
+        this.$http.defaults.headers.common.Authorization = `Bearer ${this.token}`;
         this.checkSuccess = true;
       }).catch(() => {
         this.$router.push('/login');

@@ -189,21 +189,15 @@ export default {
 };
 </script>
 
-<style>
-.customer-info {
-  margin-top: 30px;
-}
-
-@media screen and (min-width: 769px) {
-  .order-card {
-    position: sticky;
-    top: 115px;
-  }
-}
-@media screen and (max-width: 769px) {
-  .order-card {
-    margin: 0;
-    padding: 0;
-  }
-}
+<style lang="sass">
+.customer-info
+  margin-top: 30px
+@media screen and (min-width: 769px)
+  .order-card
+    position: sticky
+    top: 115px
+@media screen and (max-width: 769px)
+  .order-card
+    margin: 0
+    padding: 0
 </style>

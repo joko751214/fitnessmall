@@ -39,41 +39,29 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-.sidebar {
-  background-color: #478069;
-}
-.navbar-top {
-  a {
-    color: white;
-  }
-}
-.nav-link {
-  color: white;
-}
-.navbar-brand {
-  font-family: 'Great Vibes', cursive;
-  font-size: 40px;
-}
-@media screen and (max-width: 767px){
-    .navbar-brand {
-        font-size: 28px;
-    }
-    .nav-item {
-      font-size: 14px;
-    }
-}
-@media screen and (max-width: 375px){
-    .navbar-brand{
-        font-size: 20px;
-    }
-    .nav-item {
-      font-size: 12px;
-    }
-}
-@media screen and (min-width: 768px) {
-    .nav-link.router-link-active {
-        border-bottom: solid #fff 3px;
-    }
-  }
+<style lang="sass">
+.sidebar
+  background-color: #478069
+  .navbar-top
+    a
+      color: white
+    .nav-link
+      color: white
+.navbar-brand
+  font-family: 'Great Vibes', cursive
+  font-size: 40px
+@media screen and (max-width: 767px)
+    .navbar-brand
+      font-size: 28px
+    .nav-item
+      font-size: 14px
+@media screen and (max-width: 375px)
+    .navbar-brand
+      font-size: 20px
+    .nav-item
+      font-size: 12px
+@media screen and (min-width: 768px)
+    .nav-item
+      .router-link-active
+        border-bottom: solid #fff 3px
 </style>

@@ -202,11 +202,6 @@ export default {
         .then(() => {
           this.getCartData();
           loader.hide();
-          this.$swal(
-            '產品更新成功',
-            '請至購物車結帳',
-            'success',
-          );
         })
         .catch((err) => {
           this.$swal(
@@ -223,10 +218,9 @@ export default {
 };
 </script>
 
-<style>
-.cartImage {
-  width: 130px;
-  background-size: cover;
-  background-position: center;
-}
+<style lang="sass">
+.cartImage
+  width: 130px
+  background-size: cover
+  background-position: center
 </style>

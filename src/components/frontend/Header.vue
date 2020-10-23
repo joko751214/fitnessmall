@@ -17,57 +17,49 @@
   </div>
 </template>
 
-<style lang="scss">
-.header {
-  position: relative;
-  background-color: #e0ece4;
-}
-.jumbotron {
-  background: url('https://images.unsplash.com/photo-1522248105696-9625ba87de6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80') right top;
-  background-size: cover;
-  height: 500px;
-}
-.header-text {
-  position: absolute;
-  top: 50%;
-  left: 35%;
-  transform: translateX(-35%) translateY(-50%);
-  background: rgba(255,255,255,0.8);
-  padding: 15px 20px;
-  color: #37523d;
-  text-align: center;
-  list-style: none;
-  a {
-    display: inline-block;
-    font-weight: 700;
-    border-radius: 20px;
-    padding: 5px 15px;
-    background-color: rgb(122, 153, 108);
-    color: #fff;
-    &:hover {
-      background-color: #37523d;
-    }
-  }
-  p {
-    margin-bottom: 8px;
-  }
-}
-@media screen and (max-width: 1024px){
-  .header-text {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: initial;
-  }
-}
-@media screen and (max-width: 767px){
-    .jumbotron {
-      height: 400px;
-    }
-}
-@media screen and (max-width: 576px){
-    .jumbotron {
-      height: 300px;
-    }
-}
+<style lang="sass">
+.header
+  position: relative
+  background-color: #e0ece4
+  .jumbotron
+    background: url('https://hexschool-api.s3.us-west-2.amazonaws.com/custom/LOuEOLJQsyI3atxgmUbuWQjS9wuWlEi7Q8Zqn7b9U7kRaFvX5YjfGkhMwL9MiAse5zLS8AsxJiNArd0rIWjD2qcrgISYXOXkx7wmmh0HpY7pR7gedknz58n0ShHPCzes.jpg') right top
+    background-size: cover
+    height: 500px
+  .header-text
+    position: absolute
+    top: 50%
+    left: 35%
+    transform: translateX(-35%) translateY(-50%)
+    background: rgba(255,255,255,0.8)
+    padding: 15px 20px
+    color: #37523d
+    text-align: center
+    list-style: none
+    a
+      display: inline-block
+      font-weight: 700
+      border-radius: 20px
+      padding: 5px 15px
+      background-color: rgb(122, 153, 108)
+      color: #fff
+      &:hover
+        background-color: #37523d
+    p
+      margin-bottom: 8px
+
+@media screen and (max-width: 1024px)
+  .header
+    .header-text
+      position: relative
+      top: 0
+      left: 0
+      transform: initial
+@media screen and (max-width: 767px)
+  .header
+    .jumbotron
+      height: 400px
+@media screen and (max-width: 576px)
+  .header
+    .jumbotron
+      height: 300px
 </style>

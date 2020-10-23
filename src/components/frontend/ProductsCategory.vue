@@ -1,5 +1,5 @@
 <template>
-  <div class="my-5">
+  <div class="my-5 productsCategory">
     <h4 class="font-weight-bold">商品介紹</h4>
     <div class="row">
       <div class="col-lg-4 my-4">
@@ -76,14 +76,15 @@ export default {
 };
 </script>
 
-<style>
-.title {
-  font-size: 24px;
-  margin: 20px 0px;
-}
-.description {
-  width: 70%;
-  font-size: 16px;
-  color: rgba(0,0,0,0.6);
-}
+<style lang="sass">
+.title
+  font-size: 24px
+  margin: 20px 0px
+.description
+  width: 70%
+  font-size: 16px
+  color: rgba(0,0,0,0.6)
+@media screen and (max-width: 767px)
+  .productsCategory
+    display: none
 </style>

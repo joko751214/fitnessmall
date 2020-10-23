@@ -129,12 +129,11 @@ export default {
       }
       this.status = true;
       this.$http[httpMethod](api, this.product)
-        .then((res) => {
+        .then(() => {
           this.$emit('update');
           this.status = false;
           $('#productModal').modal('hide');
           this.product = {};
-          console.log(res);
         }).catch((err) => {
           this.$swal(
             '商品更新失敗',
@@ -194,11 +193,11 @@ export default {
 };
 </script>
 
-<style lang="scss">
-@import "~vue2-editor/dist/vue2-editor.css";
+<style lang="sass">
+@import "~vue2-editor/dist/vue2-editor.css"
 
 /* Import the Quill styles you want */
-@import '~quill/dist/quill.core.css';
-@import '~quill/dist/quill.bubble.css';
-@import '~quill/dist/quill.snow.css';
+@import '~quill/dist/quill.core.css'
+@import '~quill/dist/quill.bubble.css'
+@import '~quill/dist/quill.snow.css'
 </style>
