@@ -6,7 +6,7 @@ const animateScrollObserver = new IntersectionObserver(
         animatedScrollObserver.unobserve(entry.target);
       }
     });
-    // 當目標元素25%可見時，處發回調函數
+    // 當目標元素25%可見時，觸發回調函數
   }, { threshold: [0.5] },
 );
 
